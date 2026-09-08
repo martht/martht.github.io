@@ -1,5 +1,5 @@
 /* ============================================================
-   Material Design 3 — CV Jean Dupont
+   Material Design 3 — CV Marth Tempo
    ============================================================ */
 
 /* ---------- Google Fonts ---------- */
@@ -9,28 +9,28 @@
    1. CSS Custom Properties — MD3 Tokens
    ============================================================ */
 :root {
-  /* Color — Light */
-  --md-primary: #006874;
+  /* Color — Light (Android green seed #006C3E) */
+  --md-primary: #006C3E;
   --md-on-primary: #ffffff;
-  --md-primary-container: #97f0ff;
-  --md-on-primary-container: #001f24;
-  --md-secondary: #4a6363;
+  --md-primary-container: #89F8B2;
+  --md-on-primary-container: #00210F;
+  --md-secondary: #4E6356;
   --md-on-secondary: #ffffff;
-  --md-secondary-container: #cce8e7;
-  --md-on-secondary-container: #051f1f;
-  --md-surface: #fafdfc;
-  --md-on-surface: #191c1c;
-  --md-surface-variant: #dae4e4;
-  --md-on-surface-variant: #3f4949;
-  --md-outline: #6f7979;
-  --md-outline-variant: #bec8c8;
-  --md-background: #fafdfc;
+  --md-secondary-container: #D1E8D9;
+  --md-on-secondary-container: #0B1F14;
+  --md-surface: #FBFDF8;
+  --md-on-surface: #191C1A;
+  --md-surface-variant: #DCE5DC;
+  --md-on-surface-variant: #404943;
+  --md-outline: #707973;
+  --md-outline-variant: #BFC9C1;
+  --md-background: #FBFDF8;
   --md-error: #ba1a1a;
   --md-surface-container-lowest: #ffffff;
-  --md-surface-container-low: #f4f7f7;
-  --md-surface-container: #eef1f1;
-  --md-surface-container-high: #e8eceb;
-  --md-surface-container-highest: #e2e6e5;
+  --md-surface-container-low: #F5F8F2;
+  --md-surface-container: #EFF2ED;
+  --md-surface-container-high: #E9EDE7;
+  --md-surface-container-highest: #E3E7E1;
 
   /* Typography Scale */
   --type-display-large-size: 57px;
@@ -126,28 +126,28 @@
   --transition-standard: 200ms ease;
 }
 
-/* ---------- Dark Mode ---------- */
+/* ---------- Dark Mode (Android green) ---------- */
 [data-theme="dark"] {
-  --md-primary: #4dd8e8;
-  --md-on-primary: #00363d;
-  --md-primary-container: #004f58;
-  --md-on-primary-container: #97f0ff;
-  --md-secondary: #b0cccb;
-  --md-on-secondary: #1b3434;
-  --md-secondary-container: #324b4b;
-  --md-on-secondary-container: #cce8e7;
-  --md-surface: #191c1c;
-  --md-on-surface: #e1e3e2;
-  --md-surface-variant: #3f4949;
-  --md-on-surface-variant: #bec8c8;
-  --md-outline: #899393;
-  --md-outline-variant: #3f4949;
-  --md-background: #191c1c;
-  --md-surface-container-lowest: #0d1010;
-  --md-surface-container-low: #191c1c;
-  --md-surface-container: #1e2121;
-  --md-surface-container-high: #282b2b;
-  --md-surface-container-highest: #323535;
+  --md-primary: #6ADBA0;
+  --md-on-primary: #00391D;
+  --md-primary-container: #00522D;
+  --md-on-primary-container: #89F8B2;
+  --md-secondary: #B6CCBD;
+  --md-on-secondary: #213529;
+  --md-secondary-container: #374B3F;
+  --md-on-secondary-container: #D1E8D9;
+  --md-surface: #191C1A;
+  --md-on-surface: #E1E3DF;
+  --md-surface-variant: #404943;
+  --md-on-surface-variant: #BFC9C1;
+  --md-outline: #8A938C;
+  --md-outline-variant: #404943;
+  --md-background: #191C1A;
+  --md-surface-container-lowest: #0E110F;
+  --md-surface-container-low: #191C1A;
+  --md-surface-container: #1D201E;
+  --md-surface-container-high: #272B28;
+  --md-surface-container-highest: #323533;
 }
 
 /* ============================================================
@@ -960,12 +960,12 @@ section .container {
 }
 
 .project-img-3 {
-  background: linear-gradient(135deg, #004f58 0%, var(--md-primary-container) 100%);
+  background: linear-gradient(135deg, #003D22 0%, var(--md-primary-container) 100%);
   color: var(--md-on-primary);
 }
 
 [data-theme="dark"] .project-img-1 {
-  background: linear-gradient(135deg, var(--md-primary-container) 0%, #006874 100%);
+  background: linear-gradient(135deg, var(--md-primary-container) 0%, #006C3E 100%);
 }
 
 [data-theme="dark"] .project-img-2 {
@@ -973,7 +973,7 @@ section .container {
 }
 
 [data-theme="dark"] .project-img-3 {
-  background: linear-gradient(135deg, var(--md-primary-container) 0%, #00363d 100%);
+  background: linear-gradient(135deg, var(--md-primary-container) 0%, #00391D 100%);
 }
 
 .project-card-body {
@@ -1111,12 +1111,12 @@ section .container {
 }
 
 .project-img-solo {
-  background: linear-gradient(135deg, var(--md-primary) 0%, #004f58 100%);
+  background: linear-gradient(135deg, var(--md-primary) 0%, #003D22 100%);
   color: var(--md-on-primary);
 }
 
 [data-theme="dark"] .project-img-solo {
-  background: linear-gradient(135deg, var(--md-primary-container) 0%, #001f24 100%);
+  background: linear-gradient(135deg, var(--md-primary-container) 0%, #00210F 100%);
 }
 
 .project-card-context {
