@@ -791,7 +791,7 @@ section .container {
 
 .timeline-dot {
   position: absolute;
-  left: -33px;
+  left: -36px;
   top: 20px;
   width: 16px;
   height: 16px;
@@ -1290,7 +1290,7 @@ footer {
   }
 
   .timeline-dot {
-    left: -25px;
+    left: -28px;
     width: 12px;
     height: 12px;
   }
