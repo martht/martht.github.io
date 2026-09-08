@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Marth Tempo — Développeuse Android native, 10 ans d'expérience. Kotlin, Jetpack Compose, Clean Architecture, MVI." />
+  <title>Marth Tempo — Développeuse Android</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Prevent flash of wrong theme -->
+  <script>
+    (function(){
+      var stored = localStorage.getItem('theme');
+      var dark = stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      if (dark) document.documentElement.setAttribute('data-theme','dark');
+    }());
+  </script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="navbar" aria-label="Navigation principale">
+    <div class="navbar-inner">
+      <a href="#hero" class="navbar-brand" aria-label="Retour en haut">
+        <div class="navbar-avatar" aria-hidden="true">MT</div>
+        <span class="navbar-name">Marth Tempo</span>
+      </a>
+
+      <div class="navbar-spacer"></div>
+
+      <ul class="navbar-links" role="list">
+        <li><a href="#about"      class="navbar-link">À propos</a></li>
+        <li><a href="#experience" class="navbar-link">Expérience</a></li>
+        <li><a href="#projects"   class="navbar-link">Projets</a></li>
+        <li><a href="#education"  class="navbar-link">Formation</a></li>
+      </ul>
+
+      <button id="theme-toggle" class="btn-icon" aria-label="Activer le mode sombre" title="Changer de thème">
+        <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="display:none" aria-hidden="true">
+          <path d="M12 7a5 5 0 1 0 0 10A5 5 0 0 0 12 7zm0-5a1 1 0 0 1 1 1v1a1 1 0 0 1-2 0V3a1 1 0 0 1 1-1zm0 17a1 1 0 0 1 1 1v1a1 1 0 0 1-2 0v-1a1 1 0 0 1 1-1zm9-9a1 1 0 0 1 0 2h-1a1 1 0 0 1 0-2h1zM4 12a1 1 0 0 1-1 1H2a1 1 0 0 1 0-2h1a1 1 0 0 1 1 1zm14.95-6.364a1 1 0 0 1 0 1.414l-.707.707a1 1 0 1 1-1.414-1.414l.707-.707a1 1 0 0 1 1.414 0zM7.172 16.95a1 1 0 0 1 0 1.414l-.707.707a1 1 0 1 1-1.414-1.414l.707-.707a1 1 0 0 1 1.414 0zm10.485.707a1 1 0 1 1-1.414 1.414l-.707-.707a1 1 0 1 1 1.414-1.414l.707.707zM5.636 7.05A1 1 0 1 1 4.222 5.636l.707-.707a1 1 0 1 1 1.414 1.414l-.707.707z"/>
+        </svg>
+        <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/>
+        </svg>
+      </button>
+
+      <button id="hamburger" class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Navigation mobile">
+      <a href="#about"      class="navbar-link">À propos</a>
+      <a href="#experience" class="navbar-link">Expérience</a>
+      <a href="#projects"   class="navbar-link">Projets</a>
+      <a href="#education"  class="navbar-link">Formation</a>
+    </nav>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="hero" class="hero" aria-label="Présentation">
+      <div class="hero-inner">
+        <div class="hero-avatar" aria-label="Initiales MT">MT</div>
+
+        <h1 class="hero-name">Marth Tempo</h1>
+        <p class="hero-title">Développeuse Android · 10 ans d'expérience</p>
+
+        <p class="hero-location">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/>
+          </svg>
+          Lyon, France
+        </p>
+
+        <div class="hero-chips" role="list" aria-label="Contacts">
+          <a href="mailto:marth.tempo@proton.me" class="chip-outlined" role="listitem">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            marth.tempo@proton.me
+          </a>
+          <a href="https://github.com/martht" target="_blank" rel="noopener noreferrer" class="chip-outlined" role="listitem">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.167 6.839 9.49.5.09.682-.217.682-.483 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.34-3.369-1.34-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.026A9.578 9.578 0 0 1 12 6.836c.85.004 1.705.115 2.504.337 1.91-1.295 2.748-1.026 2.748-1.026.546 1.377.202 2.394.1 2.647.64.699 1.026 1.592 1.026 2.683 0 3.842-2.337 4.687-4.565 4.935.359.309.678.919.678 1.852 0 1.337-.012 2.415-.012 2.743 0 .268.18.578.688.48C19.138 20.164 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+            </svg>
+            GitHub
+          </a>
+          <a href="https://linkedin.com/in/marth-tempo" target="_blank" rel="noopener noreferrer" class="chip-outlined" role="listitem">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68zm1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+            </svg>
+            LinkedIn
+          </a>
+          <a href="tel:+33683344358" class="chip-outlined" role="listitem">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.61 21 3 13.39 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.24 1.02l-2.21 2.2z"/>
+            </svg>
+            +33 6 83 34 43 58
+          </a>
+        </div>
+
+        <a href="CV.pdf" class="btn-filled" download aria-label="Télécharger le CV en PDF">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 20h14v-2H5v2zm7-18L5.33 9h3.84v4h5.66V9h3.84L12 2z"/>
+          </svg>
+          Télécharger CV
+        </a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <h2 id="about-heading" class="section-heading">À propos</h2>
+        <div class="section-heading-line" aria-hidden="true"></div>
+        <div class="about-content">
+          <p class="type-body-large">
+            Développeuse Android native avec 10 ans d'expérience, je conçois et développe des applications mobiles robustes, de la phase de design à la mise en production. Mon cœur de métier : Kotlin, Jetpack Compose, et des architectures clean (MVI, MVVM, Clean Architecture) qui tiennent à l'échelle.
+          </p>
+          <br />
+          <p class="type-body-large">
+            J'ai travaillé sur des projets à forts enjeux — guidage indoor pour personnes en situation de handicap, suivi de trafic autoroutier en temps réel, gestion de stock et logistique — aussi bien en équipe chez des ESN qu'en autonomie complète sur mes propres projets.
+          </p>
+          <br />
+          <p class="type-body-large">
+            Polyvalente, j'ai également mené des missions full stack (Angular, Spring, PostgreSQL) et animé des formations Kotlin & Android. Passionnée par l'accessibilité, la qualité du code et les outils d'IA modernes, j'utilise Claude Code et Gemini au quotidien dans mon workflow.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" aria-labelledby="skills-heading">
+      <div class="container">
+        <h2 id="skills-heading" class="section-heading">Compétences</h2>
+        <div class="section-heading-line" aria-hidden="true"></div>
+        <div class="skills-grid">
+
+          <div class="skill-category">
+            <span class="skill-category-label type-label-large">Langages</span>
+            <div class="skill-chips" role="list">
+              <span class="chip-suggestion" role="listitem">Kotlin</span>
+              <span class="chip-suggestion" role="listitem">Java</span>
+              <span class="chip-suggestion" role="listitem">JavaScript</span>
+              <span class="chip-suggestion" role="listitem">TypeScript</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <span class="skill-category-label type-label-large">Android</span>
+            <div class="skill-chips" role="list">
+              <span class="chip-suggestion" role="listitem">Jetpack Compose</span>
+              <span class="chip-suggestion" role="listitem">Coroutines</span>
+              <span class="chip-suggestion" role="listitem">Flow</span>
+              <span class="chip-suggestion" role="listitem">Dagger</span>
+              <span class="chip-suggestion" role="listitem">Koin</span>
+              <span class="chip-suggestion" role="listitem">RxJava</span>
+              <span class="chip-suggestion" role="listitem">Retrofit</span>
+              <span class="chip-suggestion" role="listitem">Room</span>
+              <span class="chip-suggestion" role="listitem">DBFlow</span>
+              <span class="chip-suggestion" role="listitem">Mapbox</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <span class="skill-category-label type-label-large">Architecture &amp; Tests</span>
+            <div class="skill-chips" role="list">
+              <span class="chip-suggestion" role="listitem">Clean Architecture</span>
+              <span class="chip-suggestion" role="listitem">MVI</span>
+              <span class="chip-suggestion" role="listitem">MVVM</span>
+              <span class="chip-suggestion" role="listitem">MVP</span>
+              <span class="chip-suggestion" role="listitem">Mockito</span>
+              <span class="chip-suggestion" role="listitem">Mockk</span>
+              <span class="chip-suggestion" role="listitem">JUnit</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <span class="skill-category-label type-label-large">Web &amp; BDD</span>
+            <div class="skill-chips" role="list">
+              <span class="chip-suggestion" role="listitem">Angular</span>
+              <span class="chip-suggestion" role="listitem">AngularJS</span>
+              <span class="chip-suggestion" role="listitem">SQLite</span>
+              <span class="chip-suggestion" role="listitem">MySQL</span>
+              <span class="chip-suggestion" role="listitem">PostgreSQL</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <span class="skill-category-label type-label-large">Outils &amp; Cloud</span>
+            <div class="skill-chips" role="list">
+              <span class="chip-suggestion" role="listitem">Git</span>
+              <span class="chip-suggestion" role="listitem">GitLab</span>
+              <span class="chip-suggestion" role="listitem">GitHub</span>
+              <span class="chip-suggestion" role="listitem">Figma</span>
+              <span class="chip-suggestion" role="listitem">Firebase</span>
+              <span class="chip-suggestion" role="listitem">Agile / Scrum</span>
+              <span class="chip-suggestion" role="listitem">Claude Code</span>
+              <span class="chip-suggestion" role="listitem">Gemini</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" aria-labelledby="experience-heading">
+      <div class="container">
+        <h2 id="experience-heading" class="section-heading">Expérience</h2>
+        <div class="section-heading-line" aria-hidden="true"></div>
+
+        <div class="timeline" role="list">
+
+          <article class="timeline-item" role="listitem">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="card">
+              <div class="card-header">
+                <div class="card-role type-title-large">Conceptrice / Développeuse Android</div>
+                <div class="card-company type-title-medium">Okeenea — Lyon</div>
+                <div class="card-dates type-label-medium">5 ans</div>
+              </div>
+              <ul class="card-bullets">
+                <li>Conception et développement d'Evelity, application Android de guidage indoor pour les personnes en situation de handicap (universités, stations de métro, aéroports).</li>
+                <li>Implémentation de technologies de localisation avancées (Bluetooth, VPS) et intégration cartographique avec Mapbox.</li>
+                <li>Architecture MVI, Clean Architecture, Jetpack Compose, Coroutines, Koin — avec tests unitaires via Mockk.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item" role="listitem">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="card">
+              <div class="card-header">
+                <div class="card-role type-title-large">Conceptrice / Développeuse Full Stack &amp; Mobile</div>
+                <div class="card-company type-title-medium">Viseo — Lyon</div>
+                <div class="card-dates type-label-medium">1 an</div>
+              </div>
+              <ul class="card-bullets">
+                <li>Mission full stack sur l'application Prosol (Grand Frais) : gestion de stock et logistique pour les collaborateurs Prosol.</li>
+                <li>Développement Android (Kotlin, MVVM), backend Java Spring / Hibernate, et frontend Angular (AngularJS + Angular 10).</li>
+                <li>Mise en place de tests d'intégration et unitaires avec Mockito et JUnit.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item" role="listitem">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="card">
+              <div class="card-header">
+                <div class="card-role type-title-large">Formatrice Kotlin &amp; Android</div>
+                <div class="card-company type-title-medium">Ynov — Lyon</div>
+                <div class="card-dates type-label-medium">1 semaine</div>
+              </div>
+              <ul class="card-bullets">
+                <li>Animation d'un cours intensif sur les fondamentaux du langage Kotlin et les bases du développement d'applications Android.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item" role="listitem">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="card">
+              <div class="card-header">
+                <div class="card-role type-title-large">Conceptrice / Développeuse Android</div>
+                <div class="card-company type-title-medium">Amiltone — Villeurbanne</div>
+                <div class="card-dates type-label-medium">4 ans</div>
+              </div>
+              <ul class="card-bullets">
+                <li>Développement de plusieurs applications clients Android : ATMB (trafic autoroutier temps réel), APRR (digitalisation des métiers, gestion d'interventions et de maintenance), DansTonChat (SDK publicité).</li>
+                <li>Maîtrise des architectures MVVM, MVP, Clean Architecture avec Google Maps, Web Services REST, Mockito et JUnit.</li>
+                <li>Migration progressive de codebase Java vers Kotlin sur plusieurs projets.</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" aria-labelledby="projects-heading">
+      <div class="container">
+        <h2 id="projects-heading" class="section-heading">Projets</h2>
+        <div class="section-heading-line" aria-hidden="true"></div>
+
+        <div class="projects-grid">
+
+          <!-- TransMemo — projet solo -->
+          <article class="project-card project-card--featured">
+            <div class="project-card-image project-img-solo" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7 1.62-4.33L19.12 17h-3.24z"/>
+              </svg>
+            </div>
+            <div class="project-card-body">
+              <div class="project-card-badge">Projet solo</div>
+              <h3 class="project-card-name">TransMemo</h3>
+              <p class="project-card-desc">Application de suivi de prise de médicaments — rappels intelligents, gestion de stock, historique des prises et statistiques d'observance. Disponible Android et iOS. Développée seule, de A à Z.</p>
+              <div class="project-card-chips" role="list" aria-label="Technologies utilisées">
+                <span class="chip-tech" role="listitem">Kotlin Multiplatform</span>
+                <span class="chip-tech" role="listitem">Compose Multiplatform</span>
+                <span class="chip-tech" role="listitem">Material 3</span>
+                <span class="chip-tech" role="listitem">Clean Architecture</span>
+                <span class="chip-tech" role="listitem">Room</span>
+                <span class="chip-tech" role="listitem">Koin</span>
+                <span class="chip-tech" role="listitem">Firebase</span>
+              </div>
+            </div>
+            <div class="project-card-actions">
+              <a href="https://play.google.com/store/apps/details?id=com.chrysalide.transmemo" target="_blank" rel="noopener noreferrer" class="project-card-action-link" aria-label="Voir sur le Play Store">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M3.18 23.76c.32.18.68.2 1.01.07L14.76 12 4.19.17C3.86.04 3.5.06 3.18.24 2.55.6 2.55 1.38 2.55 1.38L2.54 22.62c0 0-.01.78.64 1.14zm4.13-13.06 2.26-2.26 7.48 4.32-2.26 2.26-7.48-4.32zm2.26 6.56-2.26-2.26 7.48-4.32 2.26 2.26-7.48 4.32zm6.49-7.56L8.57 5.38l2.26-2.26 7.49 4.32-2.26 2.26z"/>
+                </svg>
+                Play Store
+              </a>
+            </div>
+          </article>
+
+          <!-- Evelity -->
+          <article class="project-card">
+            <div class="project-card-image project-img-1" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/>
+              </svg>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-name">Evelity</h3>
+              <p class="project-card-desc">Application Android de guidage indoor pour personnes en situation de handicap — universités, stations de métro, aéroports. Localisation Bluetooth et VPS, cartographie Mapbox.</p>
+              <div class="project-card-chips" role="list" aria-label="Technologies utilisées">
+                <span class="chip-tech" role="listitem">Kotlin</span>
+                <span class="chip-tech" role="listitem">Compose</span>
+                <span class="chip-tech" role="listitem">MVI</span>
+                <span class="chip-tech" role="listitem">Koin</span>
+                <span class="chip-tech" role="listitem">Mapbox</span>
+                <span class="chip-tech" role="listitem">VPS</span>
+              </div>
+            </div>
+            <div class="project-card-actions">
+              <a href="https://play.google.com/store/apps/details?id=com.okeenea.evelity" target="_blank" rel="noopener noreferrer" class="project-card-action-link" aria-label="Voir sur le Play Store">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M3.18 23.76c.32.18.68.2 1.01.07L14.76 12 4.19.17C3.86.04 3.5.06 3.18.24 2.55.6 2.55 1.38 2.55 1.38L2.54 22.62c0 0-.01.78.64 1.14zm4.13-13.06 2.26-2.26 7.48 4.32-2.26 2.26-7.48-4.32zm2.26 6.56-2.26-2.26 7.48-4.32 2.26 2.26-7.48 4.32zm6.49-7.56L8.57 5.38l2.26-2.26 7.49 4.32-2.26 2.26z"/>
+                </svg>
+                Play Store
+              </a>
+              <span class="project-card-context type-label-small">Okeenea</span>
+            </div>
+          </article>
+
+          <!-- Prosol -->
+          <article class="project-card">
+            <div class="project-card-image project-img-2" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/>
+              </svg>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-name">Prosol — Grand Frais</h3>
+              <p class="project-card-desc">Application full stack de gestion de stock et de livraison pour les collaborateurs Prosol. Android, backend Java Spring, frontend Angular.</p>
+              <div class="project-card-chips" role="list" aria-label="Technologies utilisées">
+                <span class="chip-tech" role="listitem">Kotlin</span>
+                <span class="chip-tech" role="listitem">MVVM</span>
+                <span class="chip-tech" role="listitem">Java Spring</span>
+                <span class="chip-tech" role="listitem">Angular</span>
+                <span class="chip-tech" role="listitem">PostgreSQL</span>
+              </div>
+            </div>
+            <div class="project-card-actions">
+              <span class="project-card-context type-label-small">Viseo</span>
+            </div>
+          </article>
+
+          <!-- ATMB -->
+          <article class="project-card">
+            <div class="project-card-image project-img-3" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.8 4.2C16.1 2.8 14 2 11.7 2 6.5 2 2.3 6.2 2.3 11.4c0 2.5.9 4.7 2.5 6.5L2.3 22l4.3-2.4c1.3.7 2.8 1.1 4.4 1.1h.1c.1 0 .1 0 .1 0 5.2 0 9.4-4.2 9.4-9.4C20.5 8.8 19.5 6.3 17.8 4.2zM12 17.2c-3.2 0-5.8-2.6-5.8-5.8S8.8 5.6 12 5.6s5.8 2.6 5.8 5.8-2.6 5.8-5.8 5.8z"/>
+              </svg>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-name">ATMB</h3>
+              <p class="project-card-desc">Application grand public de suivi et informations en temps réel du trafic, des événements, webcams et météo sur le réseau autoroutier ATMB.</p>
+              <div class="project-card-chips" role="list" aria-label="Technologies utilisées">
+                <span class="chip-tech" role="listitem">Kotlin</span>
+                <span class="chip-tech" role="listitem">MVVM</span>
+                <span class="chip-tech" role="listitem">Clean Archi</span>
+                <span class="chip-tech" role="listitem">Google Maps</span>
+                <span class="chip-tech" role="listitem">REST</span>
+              </div>
+            </div>
+            <div class="project-card-actions">
+              <span class="project-card-context type-label-small">Amiltone</span>
+            </div>
+          </article>
+
+          <!-- APRR -->
+          <article class="project-card">
+            <div class="project-card-image project-img-solo" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/>
+              </svg>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-name">APRR</h3>
+              <p class="project-card-desc">Digitalisation des métiers APRR : gestion des interventions d'urgence sur autoroute et maintenance des stations de péage.</p>
+              <div class="project-card-chips" role="list" aria-label="Technologies utilisées">
+                <span class="chip-tech" role="listitem">Java</span>
+                <span class="chip-tech" role="listitem">MVP</span>
+                <span class="chip-tech" role="listitem">Clean Archi</span>
+                <span class="chip-tech" role="listitem">Google Maps</span>
+                <span class="chip-tech" role="listitem">REST</span>
+              </div>
+            </div>
+            <div class="project-card-actions">
+              <span class="project-card-context type-label-small">Amiltone</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" aria-labelledby="education-heading">
+      <div class="container">
+        <h2 id="education-heading" class="section-heading">Formation</h2>
+        <div class="section-heading-line" aria-hidden="true"></div>
+
+        <div class="education-grid education-grid--single">
+
+          <article class="edu-card">
+            <div class="edu-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zm-1 13.99L5 13.52V17l6 3 6-3v-3.48l-6 3.47z"/>
+              </svg>
+            </div>
+            <div class="edu-content">
+              <div class="edu-degree type-title-large">Bac+3 Licence Professionnelle</div>
+              <div class="edu-speciality type-title-medium">Informatique Embarqué et Mobile</div>
+              <div class="edu-school type-title-medium">IUT Lyon 1 — Bourg-en-Bresse</div>
+              <div class="edu-dates type-label-medium">
+                <time datetime="2017">2017</time> · Alternance
+              </div>
+            </div>
+          </article>
+
+          <article class="edu-card">
+            <div class="edu-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M11.5 2C6.81 2 3 5.81 3 10.5S6.81 19 11.5 19h.5v3c4.86-2.34 8-7 8-11.5C20 5.81 16.19 2 11.5 2zm1 14.5h-2v-2h2v2zm0-4h-2c0-3.25 3-3 3-5 0-1.1-.9-2-2-2s-2 .9-2 2h-2c0-2.21 1.79-4 4-4s4 1.79 4 4c0 2.5-3 2.75-3 5z"/>
+              </svg>
+            </div>
+            <div class="edu-content">
+              <div class="edu-degree type-title-large">Anglais courant</div>
+              <div class="edu-speciality type-title-medium">Langue</div>
+              <div class="edu-school type-title-medium"></div>
+              <div class="edu-dates type-label-medium"></div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <div class="footer-inner">
+      <p class="footer-text">Construit avec ❤️ et Material Design 3</p>
+      <p class="footer-text">Marth Tempo &copy; <time datetime="2026">2026</time></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
