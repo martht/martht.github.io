@@ -918,6 +918,14 @@ section .container {
   opacity: 0.7;
 }
 
+.project-icon-img {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--shape-large);
+  box-shadow: var(--elevation-2);
+  object-fit: cover;
+}
+
 .project-img-1 {
   background: linear-gradient(135deg, var(--md-primary) 0%, var(--md-primary-container) 100%);
   color: var(--md-on-primary);
