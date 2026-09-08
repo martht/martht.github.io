@@ -926,6 +926,29 @@ section .container {
   object-fit: cover;
 }
 
+/* Company logo cards — fond neutre adaptatif */
+.project-card-image--logo {
+  background-color: var(--md-surface-container-lowest);
+  border-bottom: 1px solid var(--md-outline-variant);
+}
+
+[data-theme="dark"] .project-card-image--logo {
+  background-color: var(--md-surface-container);
+}
+
+.project-logo-img {
+  max-height: 72px;
+  max-width: 70%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: none;
+}
+
+[data-theme="dark"] .project-logo-img {
+  filter: brightness(0) invert(1) opacity(0.85);
+}
+
 .project-img-1 {
   background: linear-gradient(135deg, var(--md-primary) 0%, var(--md-primary-container) 100%);
   color: var(--md-on-primary);
