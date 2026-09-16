@@ -32,8 +32,8 @@
 
       <ul class="navbar-links" role="list">
         <li><a href="#about"      class="navbar-link">À propos</a></li>
+        <li><a href="#skills"     class="navbar-link">Compétences</a></li>
         <li><a href="#experience" class="navbar-link">Expérience</a></li>
-        <li><a href="#projects"   class="navbar-link">Projets</a></li>
         <li><a href="#education"  class="navbar-link">Formation</a></li>
       </ul>
 
@@ -55,8 +55,8 @@
 
     <nav id="mobile-nav" class="mobile-nav" aria-label="Navigation mobile">
       <a href="#about"      class="navbar-link">À propos</a>
+      <a href="#skills"     class="navbar-link">Compétences</a>
       <a href="#experience" class="navbar-link">Expérience</a>
-      <a href="#projects"   class="navbar-link">Projets</a>
       <a href="#education"  class="navbar-link">Formation</a>
     </nav>
   </nav>
@@ -121,11 +121,11 @@
         <div class="section-heading-line" aria-hidden="true"></div>
         <div class="about-content">
           <p class="type-body-large">
-            Développeuse Android native avec 10 ans d'expérience, je conçois et développe des applications mobiles robustes, de la phase de design à la mise en production. Mon cœur de métier : Kotlin, Jetpack Compose, et des architectures clean (MVI, MVVM, Clean Architecture) qui tiennent à l'échelle.
+            Développeuse Android native avec 10 ans d'expérience, je conçois et développe des applications mobiles robustes, de la phase de design à la mise en production. Mon cœur de métier : Kotlin, Jetpack Compose, je priorise la qualité du code pour des projets scalables en suivant les principes de clean architecture et SOLID — séparation des responsabilités, inversion de dépendance, testabilité et architecture multi-module.
           </p>
           <br />
           <p class="type-body-large">
-            J'ai travaillé sur des projets à forts enjeux — rappels de prise de médicaments, guidage indoor pour personnes en situation de handicap, suivi de trafic autoroutier en temps réel, gestion de stock et logistique — aussi bien en équipe chez des ESN qu'en autonomie complète sur mes propres projets.
+            J'ai travaillé sur des projets à forts enjeux — rappels de prise de médicaments, guidage indoor pour personnes en situation de handicap, suivi de trafic autoroutier en temps réel, gestion de stock et logistique — aussi bien en équipe qu'en autonomie complète sur mes propres projets.
           </p>
           <br />
           <p class="type-body-large">
@@ -236,6 +236,7 @@
 
         <div class="timeline" role="list">
 
+          <!-- TransMemo — projet personnel -->
           <article class="timeline-item" role="listitem">
             <div class="timeline-dot" aria-hidden="true"></div>
             <div class="card">
@@ -244,14 +245,51 @@
                 <div class="card-company type-title-medium">TransMemo — Projet personnel</div>
                 <div class="card-dates type-label-medium">Depuis janvier 2025</div>
               </div>
-              <ul class="card-bullets">
-                <li>Conception métier et UX/UI ; modernisation d'une très ancienne version de l'application de rappel de prise de médicaments.</li>
-                <li>Implémentation de features, correction de bugs et déploiements Play Store, en Kotlin Multiplatform (Android + iOS).</li>
-                <li>Mise en place d'une stack CI/CD Firebase et GitHub, au sein d'une petite équipe (1 dev, 1 dessinateur, plusieurs testeurs).</li>
-              </ul>
+
+              <div class="missions">
+                <div class="mission">
+                  <div class="mission-header">
+                    <img src="assets/transmemo-icon.webp" alt="" class="mission-logo" />
+                    <span class="mission-name">TransMemo</span>
+                    <span class="project-card-badge">Projet solo</span>
+                  </div>
+                  <p class="mission-desc">Application de suivi de prise de médicaments — rappels intelligents, gestion de stock, historique des prises et statistiques d'observance. Disponible Android et iOS. Développée seule, de A à Z.</p>
+                  <ul class="card-bullets">
+                    <li>Conception métier et UX/UI ; modernisation d'une très ancienne version de l'application.</li>
+                    <li>Implémentation de features, correction de bugs et déploiements Play Store.</li>
+                    <li>Mise en place d'une stack CI/CD Firebase et GitHub.</li>
+                  </ul>
+                  <div class="mission-chips" role="list" aria-label="Technologies utilisées">
+                    <span class="chip-tech" role="listitem">Kotlin Multiplatform</span>
+                    <span class="chip-tech" role="listitem">Compose Multiplatform</span>
+                    <span class="chip-tech" role="listitem">Android</span>
+                    <span class="chip-tech" role="listitem">iOS</span>
+                    <span class="chip-tech" role="listitem">Xcode</span>
+                    <span class="chip-tech" role="listitem">Gradle</span>
+                    <span class="chip-tech" role="listitem">Coroutines</span>
+                    <span class="chip-tech" role="listitem">Material 3</span>
+                    <span class="chip-tech" role="listitem">Clean Architecture</span>
+                    <span class="chip-tech" role="listitem">Room</span>
+                    <span class="chip-tech" role="listitem">Koin</span>
+                    <span class="chip-tech" role="listitem">Mockk</span>
+                    <span class="chip-tech" role="listitem">Firebase Crashlytics</span>
+                    <span class="chip-tech" role="listitem">Firebase App Distribution</span>
+                  </div>
+                  <div class="mission-footer">
+                    <span class="mission-team">Équipe : 1 dev, 1 dessinateur, plusieurs testeurs</span>
+                    <a href="https://play.google.com/store/apps/details?id=com.chrysalide.transmemo" target="_blank" rel="noopener noreferrer" class="project-card-action-link" aria-label="Voir TransMemo sur le Play Store">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 0 24 24" aria-hidden="true">
+                        <path d="m3.751.61 13.124 7.546-2.813 2.813zm-2.719-.61 12.047 12-12.046 12c-.613-.271-1.033-.874-1.033-1.575 0-.023 0-.046.001-.068v.003-20.719c-.001-.019-.001-.042-.001-.065 0-.701.42-1.304 1.022-1.571l.011-.004zm19.922 10.594c.414.307.679.795.679 1.344 0 .022 0 .043-.001.065v-.003c.004.043.007.094.007.145 0 .516-.25.974-.636 1.258l-.004.003-2.813 1.593-3.046-2.999 3.047-3.047zm-17.203 12.796 10.312-10.359 2.813 2.813z"/>
+                      </svg>
+                      Play Store
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </article>
 
+          <!-- Okeenea -->
           <article class="timeline-item" role="listitem">
             <div class="timeline-dot" aria-hidden="true"></div>
             <div class="card">
@@ -260,15 +298,55 @@
                 <div class="card-company type-title-medium">Okeenea — Lyon</div>
                 <div class="card-dates type-label-medium">5 ans · Juin 2021 – Mai 2026</div>
               </div>
-              <ul class="card-bullets">
-                <li>Evelity — application Android inclusive de guidage indoor (universités, stations de métro, aéroports) : migration d'un POC vers une app en production, en Clean Architecture scalable multi-modules.</li>
-                <li>Migration de RxKotlin vers Kotlin Coroutines et des layouts XML vers Jetpack Compose ; prise en compte totale de l'accessibilité.</li>
-                <li>R&amp;D en localisation indoor (Bluetooth, VPS) et cartographie Mapbox ; Test Driven Development et tests terrain.</li>
-                <li>Code review, cross testing et déploiements Play Store, au sein d'une équipe de 2 devs + 1 lead tech Android (+ équipe iOS et design).</li>
-              </ul>
+
+              <div class="missions">
+                <div class="mission">
+                  <div class="mission-header">
+                    <img src="assets/evelity-icon.webp" alt="" class="mission-logo" />
+                    <span class="mission-name">Evelity</span>
+                  </div>
+                  <p class="mission-desc">Application Android inclusive de guidage indoor (universités, stations de métro, aéroports).</p>
+                  <ul class="card-bullets">
+                    <li>Migration d'un POC vers une app en production, en Clean Architecture scalable multi-modules.</li>
+                    <li>Migration de RxKotlin vers Kotlin Coroutines et des layouts XML vers Jetpack Compose ; prise en compte totale de l'accessibilité.</li>
+                    <li>R&amp;D en localisation indoor (Bluetooth, VPS) et cartographie Mapbox ; Test Driven Development et tests terrain.</li>
+                    <li>Code review, cross testing et déploiements Play Store.</li>
+                  </ul>
+                  <div class="mission-chips" role="list" aria-label="Technologies utilisées">
+                    <span class="chip-tech" role="listitem">Kotlin</span>
+                    <span class="chip-tech" role="listitem">Gradle</span>
+                    <span class="chip-tech" role="listitem">Compose</span>
+                    <span class="chip-tech" role="listitem">Coroutines</span>
+                    <span class="chip-tech" role="listitem">MVI</span>
+                    <span class="chip-tech" role="listitem">Material Design 2 &amp; 3</span>
+                    <span class="chip-tech" role="listitem">Design Tokens</span>
+                    <span class="chip-tech" role="listitem">Clean Architecture</span>
+                    <span class="chip-tech" role="listitem">Room</span>
+                    <span class="chip-tech" role="listitem">Retrofit</span>
+                    <span class="chip-tech" role="listitem">Koin</span>
+                    <span class="chip-tech" role="listitem">Mockk</span>
+                    <span class="chip-tech" role="listitem">Mapbox</span>
+                    <span class="chip-tech" role="listitem">Bluetooth</span>
+                    <span class="chip-tech" role="listitem">VPS</span>
+                    <span class="chip-tech" role="listitem">KMP</span>
+                    <span class="chip-tech" role="listitem">Firebase Crashlytics</span>
+                    <span class="chip-tech" role="listitem">Firebase App Distribution</span>
+                  </div>
+                  <div class="mission-footer">
+                    <span class="mission-team">Équipe : 2 devs + 1 lead tech Android (+ équipe iOS et design)</span>
+                    <a href="https://play.google.com/store/apps/details?id=com.okeenea.evelity" target="_blank" rel="noopener noreferrer" class="project-card-action-link" aria-label="Voir Evelity sur le Play Store">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 0 24 24" aria-hidden="true">
+                        <path d="m3.751.61 13.124 7.546-2.813 2.813zm-2.719-.61 12.047 12-12.046 12c-.613-.271-1.033-.874-1.033-1.575 0-.023 0-.046.001-.068v.003-20.719c-.001-.019-.001-.042-.001-.065 0-.701.42-1.304 1.022-1.571l.011-.004zm19.922 10.594c.414.307.679.795.679 1.344 0 .022 0 .043-.001.065v-.003c.004.043.007.094.007.145 0 .516-.25.974-.636 1.258l-.004.003-2.813 1.593-3.046-2.999 3.047-3.047zm-17.203 12.796 10.312-10.359 2.813 2.813z"/>
+                      </svg>
+                      Play Store
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </article>
 
+          <!-- Viseo -->
           <article class="timeline-item" role="listitem">
             <div class="timeline-dot" aria-hidden="true"></div>
             <div class="card">
@@ -277,31 +355,49 @@
                 <div class="card-company type-title-medium">Viseo — Lyon</div>
                 <div class="card-dates type-label-medium">1,5 an · Novembre 2019 – Mai 2021</div>
               </div>
-              <ul class="card-bullets">
-                <li>Mission full stack sur l'application Prosol (Grand Frais) : gestion de stock et logistique pour les collaborateurs Prosol, au sein d'une équipe de 8 devs full-stack + 1 PO.</li>
-                <li>Développement Android (Kotlin, MVVM), backend Java Spring / Hibernate, et frontend Angular (AngularJS + Angular 10).</li>
-                <li>Mise en place de tests d'intégration et unitaires avec Mockito et JUnit.</li>
-              </ul>
-            </div>
-          </article>
 
-          <article class="timeline-item" role="listitem">
-            <div class="timeline-dot" aria-hidden="true"></div>
-            <div class="card">
-              <div class="card-header">
-                <div class="card-role type-title-large">Conceptrice / Développeuse Android</div>
-                <div class="card-company type-title-medium">Amiltone — Villeurbanne</div>
-                <div class="card-dates type-label-medium">3,5 ans · Août 2016 – Octobre 2019</div>
+              <div class="missions">
+                <div class="mission">
+                  <div class="mission-header">
+                    <img src="assets/grandfrais-logo.png" alt="" class="mission-logo" />
+                    <span class="mission-name">Prosol — Grand Frais</span>
+                  </div>
+                  <p class="mission-desc">Gestion de stock et de livraison des articles à destination des collaborateurs de Prosol.</p>
+                  <ul class="card-bullets">
+                    <li>Développement Android (Kotlin, MVVM), backend Java Spring / Hibernate, et frontend Angular (AngularJS + Angular 10).</li>
+                    <li>Mise en place de tests d'intégration et unitaires avec Mockito et JUnit.</li>
+                  </ul>
+                  <div class="mission-chips" role="list" aria-label="Technologies utilisées">
+                    <span class="chip-tech" role="listitem">Kotlin</span>
+                    <span class="chip-tech" role="listitem">MVVM</span>
+                    <span class="chip-tech" role="listitem">Java Spring</span>
+                    <span class="chip-tech" role="listitem">Angular</span>
+                    <span class="chip-tech" role="listitem">PostgreSQL</span>
+                  </div>
+                  <div class="mission-footer">
+                    <span class="mission-team">Équipe : 8 devs full-stack + 1 PO</span>
+                  </div>
+                </div>
+
+                <div class="mission">
+                  <div class="mission-header">
+                    <img src="assets/lvmh-logo.svg" alt="" class="mission-logo" />
+                    <span class="mission-name">LVMH</span>
+                  </div>
+                  <p class="mission-desc">Migration de l'outil interne de gestion des stocks à l'échelle internationale, depuis Flash vers Angular et React Native.</p>
+                  <div class="mission-chips" role="list" aria-label="Technologies utilisées">
+                    <span class="chip-tech" role="listitem">React Native</span>
+                    <span class="chip-tech" role="listitem">Angular</span>
+                  </div>
+                  <div class="mission-footer">
+                    <span class="mission-team">Équipe : 4 devs full-stack + 1 PO</span>
+                  </div>
+                </div>
               </div>
-              <ul class="card-bullets">
-                <li>ATMB — application grand public de suivi trafic en temps réel, webcams et météo sur le réseau autoroutier ATMB (Kotlin, MVVM, Clean Architecture, Google Maps, DBFlow, RxKotlin).</li>
-                <li>APRR — digitalisation des métiers : gestion d'interventions sur autoroute et maintenance des stations de péage (Java, MVP, Clean Architecture, Dagger, RxJava, Fastlane).</li>
-                <li>DansTonChat — ajout de fonctionnalités et mise à jour du SDK de publicité sur l'application existante.</li>
-                <li>Code review et cross testing au sein d'équipes de 1 à 3 devs Android.</li>
-              </ul>
             </div>
           </article>
 
+          <!-- Ynov -->
           <article class="timeline-item" role="listitem">
             <div class="timeline-dot" aria-hidden="true"></div>
             <div class="card">
@@ -316,184 +412,94 @@
             </div>
           </article>
 
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" aria-labelledby="projects-heading">
-      <div class="container">
-        <h2 id="projects-heading" class="section-heading">Projets</h2>
-        <div class="section-heading-line" aria-hidden="true"></div>
-
-        <div class="projects-grid">
-
-          <!-- TransMemo — projet solo -->
-          <article class="project-card project-card--featured">
-            <div class="project-card-image project-img-solo" aria-hidden="true">
-              <img src="assets/transmemo-icon.webp" alt="TransMemo icon" class="project-icon-img" />
-            </div>
-            <div class="project-card-body">
-              <div class="project-card-badge">Projet solo</div>
-              <h3 class="project-card-name">TransMemo</h3>
-              <p class="project-card-desc">Application de suivi de prise de médicaments — rappels intelligents, gestion de stock, historique des prises et statistiques d'observance. Disponible Android et iOS. Développée seule, de A à Z.</p>
-              <div class="project-card-chips" role="list" aria-label="Technologies utilisées">
-                <span class="chip-tech" role="listitem">Kotlin Multiplatform</span>
-                <span class="chip-tech" role="listitem">Compose Multiplatform</span>
-                <span class="chip-tech" role="listitem">Material 3</span>
-                <span class="chip-tech" role="listitem">Clean Architecture</span>
-                <span class="chip-tech" role="listitem">Room</span>
-                <span class="chip-tech" role="listitem">Koin</span>
-                <span class="chip-tech" role="listitem">Firebase</span>
+          <!-- Amiltone -->
+          <article class="timeline-item" role="listitem">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="card">
+              <div class="card-header">
+                <div class="card-role type-title-large">Conceptrice / Développeuse Android</div>
+                <div class="card-company type-title-medium">Amiltone — Villeurbanne</div>
+                <div class="card-dates type-label-medium">3,5 ans · Août 2016 – Octobre 2019</div>
               </div>
-            </div>
-            <div class="project-card-actions">
-              <a href="https://play.google.com/store/apps/details?id=com.chrysalide.transmemo" target="_blank" rel="noopener noreferrer" class="project-card-action-link" aria-label="Voir sur le Play Store">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M3.18 23.76c.32.18.68.2 1.01.07L14.76 12 4.19.17C3.86.04 3.5.06 3.18.24 2.55.6 2.55 1.38 2.55 1.38L2.54 22.62c0 0-.01.78.64 1.14zm4.13-13.06 2.26-2.26 7.48 4.32-2.26 2.26-7.48-4.32zm2.26 6.56-2.26-2.26 7.48-4.32 2.26 2.26-7.48 4.32zm6.49-7.56L8.57 5.38l2.26-2.26 7.49 4.32-2.26 2.26z"/>
-                </svg>
-                Play Store
-              </a>
-              <span class="project-card-context type-label-small">Chrysalide</span>
-            </div>
-          </article>
 
-          <!-- Evelity -->
-          <article class="project-card">
-            <div class="project-card-image project-img-1" aria-hidden="true">
-              <img src="assets/evelity-icon.webp" alt="Evelity icon" class="project-icon-img" />
-            </div>
-            <div class="project-card-body">
-              <h3 class="project-card-name">Evelity</h3>
-              <p class="project-card-desc">Application Android de guidage indoor/outdoor inclusive — universités, stations de métro, aéroports... Localisation Bluetooth et VPS, cartographie Mapbox. Migration vers Clean Archi multimodules, RxKotlin vers Coroutines</p>
-              <div class="project-card-chips" role="list" aria-label="Technologies utilisées">
-                <span class="chip-tech" role="listitem">Kotlin</span>
-                <span class="chip-tech" role="listitem">Compose</span>
-                <span class="chip-tech" role="listitem">Coroutines</span>
-                <span class="chip-tech" role="listitem">MVI</span>
-                <span class="chip-tech" role="listitem">Material 3</span>
-                <span class="chip-tech" role="listitem">Clean Architecture</span>
-                <span class="chip-tech" role="listitem">Room</span>
-                <span class="chip-tech" role="listitem">Retrofit</span>
-                <span class="chip-tech" role="listitem">Koin</span>
-                <span class="chip-tech" role="listitem">Mapbox</span>
-                <span class="chip-tech" role="listitem">VPS</span>
-                <span class="chip-tech" role="listitem">KMP</span>
-                <span class="chip-tech" role="listitem">Firebase</span>
-              </div>
-            </div>
-            <div class="project-card-actions">
-              <a href="https://play.google.com/store/apps/details?id=com.okeenea.evelity" target="_blank" rel="noopener noreferrer" class="project-card-action-link" aria-label="Voir sur le Play Store">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M3.18 23.76c.32.18.68.2 1.01.07L14.76 12 4.19.17C3.86.04 3.5.06 3.18.24 2.55.6 2.55 1.38 2.55 1.38L2.54 22.62c0 0-.01.78.64 1.14zm4.13-13.06 2.26-2.26 7.48 4.32-2.26 2.26-7.48-4.32zm2.26 6.56-2.26-2.26 7.48-4.32 2.26 2.26-7.48 4.32zm6.49-7.56L8.57 5.38l2.26-2.26 7.49 4.32-2.26 2.26z"/>
-                </svg>
-                Play Store
-              </a>
-              <span class="project-card-context type-label-small">Okeenea</span>
-            </div>
-          </article>
+              <div class="missions">
+                <div class="mission">
+                  <div class="mission-header">
+                    <img src="assets/atmb-logo.png" alt="" class="mission-logo" />
+                    <span class="mission-name">ATMB</span>
+                  </div>
+                  <p class="mission-desc">Application grand public de suivi et informations en temps réel du trafic, des événements, webcams et météo sur le réseau autoroutier ATMB.</p>
+                  <ul class="card-bullets">
+                    <li>Implémentation de features et correction de bugs.</li>
+                    <li>Code review et cross testing.</li>
+                  </ul>
+                  <div class="mission-chips" role="list" aria-label="Technologies utilisées">
+                    <span class="chip-tech" role="listitem">Kotlin</span>
+                    <span class="chip-tech" role="listitem">MVVM</span>
+                    <span class="chip-tech" role="listitem">Clean Architecture</span>
+                    <span class="chip-tech" role="listitem">Retrofit</span>
+                    <span class="chip-tech" role="listitem">Koin</span>
+                    <span class="chip-tech" role="listitem">Google Maps</span>
+                    <span class="chip-tech" role="listitem">DBFlow</span>
+                    <span class="chip-tech" role="listitem">RxKotlin</span>
+                    <span class="chip-tech" role="listitem">Mockito</span>
+                    <span class="chip-tech" role="listitem">JUnit</span>
+                    <span class="chip-tech" role="listitem">SonarQube</span>
+                  </div>
+                  <div class="mission-footer">
+                    <span class="mission-team">Équipe : 3 devs Android</span>
+                  </div>
+                </div>
 
-          <!-- Prosol -->
-          <article class="project-card">
-            <div class="project-card-image project-card-image--logo" aria-hidden="true">
-              <img src="assets/grandfrais-logo.png" alt="Grand Frais" class="project-logo-img" />
-            </div>
-            <div class="project-card-body">
-              <h3 class="project-card-name">Prosol — Grand Frais</h3>
-              <p class="project-card-desc">Application full stack de gestion de stock et de livraison pour les collaborateurs Grand Frais. Android, backend Java Spring, frontend Angular.</p>
-              <div class="project-card-chips" role="list" aria-label="Technologies utilisées">
-                <span class="chip-tech" role="listitem">Kotlin</span>
-                <span class="chip-tech" role="listitem">MVVM</span>
-                <span class="chip-tech" role="listitem">Java Spring</span>
-                <span class="chip-tech" role="listitem">Angular</span>
-                <span class="chip-tech" role="listitem">PostgreSQL</span>
-              </div>
-            </div>
-            <div class="project-card-actions">
-              <span class="project-card-context type-label-small">Viseo</span>
-            </div>
-          </article>
+                <div class="mission">
+                  <div class="mission-header">
+                    <img src="assets/aprr-logo.png" alt="" class="mission-logo" />
+                    <span class="mission-name">APRR</span>
+                  </div>
+                  <p class="mission-desc">Digitalisation des métiers APRR : gestion des interventions d'urgence sur autoroute et maintenance des stations de péage.</p>
+                  <ul class="card-bullets">
+                    <li>Implémentation de features et correction de bugs.</li>
+                    <li>Code review et cross testing.</li>
+                  </ul>
+                  <div class="mission-chips" role="list" aria-label="Technologies utilisées">
+                    <span class="chip-tech" role="listitem">Java</span>
+                    <span class="chip-tech" role="listitem">MVP</span>
+                    <span class="chip-tech" role="listitem">Clean Architecture</span>
+                    <span class="chip-tech" role="listitem">Retrofit</span>
+                    <span class="chip-tech" role="listitem">Google Maps</span>
+                    <span class="chip-tech" role="listitem">Dagger</span>
+                    <span class="chip-tech" role="listitem">DBFlow</span>
+                    <span class="chip-tech" role="listitem">RxJava</span>
+                    <span class="chip-tech" role="listitem">Mockito</span>
+                    <span class="chip-tech" role="listitem">JUnit</span>
+                    <span class="chip-tech" role="listitem">SonarQube</span>
+                    <span class="chip-tech" role="listitem">Fastlane</span>
+                  </div>
+                  <div class="mission-footer">
+                    <span class="mission-team">Équipe : 3 devs Android</span>
+                  </div>
+                </div>
 
-          <!-- LVMH -->
-          <article class="project-card">
-            <div class="project-card-image project-card-image--logo" aria-hidden="true">
-              <img src="assets/lvmh-logo.svg" alt="LVMH" class="project-logo-img" />
-            </div>
-            <div class="project-card-body">
-              <h3 class="project-card-name">LVMH</h3>
-              <p class="project-card-desc">Migration de l'outil interne de gestion des stocks à l'échelle internationale depuis Flash vers Angular et React Native.</p>
-              <div class="project-card-chips" role="list" aria-label="Technologies utilisées">
-                <span class="chip-tech" role="listitem">React Native</span>
-                <span class="chip-tech" role="listitem">Angular</span>
+                <div class="mission">
+                  <div class="mission-header">
+                    <img src="assets/danstonchat-logo.png" alt="" class="mission-logo" />
+                    <span class="mission-name">DansTonChat</span>
+                  </div>
+                  <p class="mission-desc">Ajout de fonctionnalités et mise à jour du SDK de publicité sur l'application existante.</p>
+                  <div class="mission-chips" role="list" aria-label="Technologies utilisées">
+                    <span class="chip-tech" role="listitem">Java</span>
+                    <span class="chip-tech" role="listitem">MVP</span>
+                    <span class="chip-tech" role="listitem">Retrofit</span>
+                    <span class="chip-tech" role="listitem">Dagger</span>
+                    <span class="chip-tech" role="listitem">DBFlow</span>
+                    <span class="chip-tech" role="listitem">RxJava</span>
+                    <span class="chip-tech" role="listitem">Fastlane</span>
+                  </div>
+                  <div class="mission-footer">
+                    <span class="mission-team">Équipe : 1 dev Android</span>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="project-card-actions">
-              <span class="project-card-context type-label-small">Viseo</span>
-            </div>
-          </article>
-
-          <!-- ATMB -->
-          <article class="project-card">
-            <div class="project-card-image project-card-image--logo" aria-hidden="true">
-              <img src="assets/atmb-logo.png" alt="ATMB" class="project-logo-img" />
-            </div>
-            <div class="project-card-body">
-              <h3 class="project-card-name">ATMB</h3>
-              <p class="project-card-desc">Application grand public de suivi et informations en temps réel du trafic, des événements, webcams et météo sur le réseau autoroutier ATMB.</p>
-              <div class="project-card-chips" role="list" aria-label="Technologies utilisées">
-                <span class="chip-tech" role="listitem">Kotlin</span>
-                <span class="chip-tech" role="listitem">MVVM</span>
-                <span class="chip-tech" role="listitem">Retrofit</span>
-                <span class="chip-tech" role="listitem">Clean Archi</span>
-                <span class="chip-tech" role="listitem">Google Maps</span>
-                <span class="chip-tech" role="listitem">REST</span>
-              </div>
-            </div>
-            <div class="project-card-actions">
-              <span class="project-card-context type-label-small">Amiltone</span>
-            </div>
-          </article>
-
-          <!-- APRR -->
-          <article class="project-card">
-            <div class="project-card-image project-card-image--logo" aria-hidden="true">
-              <img src="assets/aprr-logo.png" alt="APRR" class="project-logo-img" />
-            </div>
-            <div class="project-card-body">
-              <h3 class="project-card-name">APRR</h3>
-              <p class="project-card-desc">Digitalisation des métiers APRR : gestion des interventions d'urgence sur autoroute et maintenance des stations de péage.</p>
-              <div class="project-card-chips" role="list" aria-label="Technologies utilisées">
-                <span class="chip-tech" role="listitem">Java</span>
-                <span class="chip-tech" role="listitem">MVP</span>
-                <span class="chip-tech" role="listitem">Retrofit</span>
-                <span class="chip-tech" role="listitem">Clean Archi</span>
-                <span class="chip-tech" role="listitem">Google Maps</span>
-                <span class="chip-tech" role="listitem">REST</span>
-              </div>
-            </div>
-            <div class="project-card-actions">
-              <span class="project-card-context type-label-small">Amiltone</span>
-            </div>
-          </article>
-
-          <!-- DansTonChat -->
-          <article class="project-card">
-            <div class="project-card-image project-card-image--logo" aria-hidden="true">
-              <img src="assets/danstonchat-logo.png" alt="DansTonChat" class="project-logo-img" />
-            </div>
-            <div class="project-card-body">
-              <h3 class="project-card-name">DansTonChat</h3>
-              <p class="project-card-desc">Maintenance de l'application, résolutiopn de bugs, ajout de publicités, mise en place d'une Clean Archi.</p>
-              <div class="project-card-chips" role="list" aria-label="Technologies utilisées">
-                <span class="chip-tech" role="listitem">Java</span>
-                <span class="chip-tech" role="listitem">MVP</span>
-                <span class="chip-tech" role="listitem">Retrofit</span>
-                <span class="chip-tech" role="listitem">Clean Archi</span>
-                <span class="chip-tech" role="listitem">REST</span>
-              </div>
-            </div>
-            <div class="project-card-actions">
-              <span class="project-card-context type-label-small">Amiltone</span>
             </div>
           </article>
 
