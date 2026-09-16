@@ -899,23 +899,34 @@ section .container {
 .mission-header {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   margin-bottom: 6px;
 }
 
 .mission-logo {
-  width: 96px;
-  height: 96px;
-  border-radius: var(--shape-medium);
+  width: 44px;
+  height: 44px;
+  border-radius: var(--shape-small);
   object-fit: contain;
   background-color: var(--md-surface-container-lowest);
-  padding: 8px;
+  padding: 6px;
   flex-shrink: 0;
 }
 
 [data-theme="dark"] .mission-logo {
   background-color: var(--md-surface-container);
   filter: brightness(1.1);
+}
+
+/* LVMH logo asset is a solid white SVG — give it a permanent dark chip
+   instead of inverting (filter also inverts this element's own background-color) */
+.mission-logo[src*="lvmh"] {
+  background-color: #1c1f1e;
+}
+
+[data-theme="dark"] .mission-logo[src*="lvmh"] {
+  background-color: #1c1f1e;
+  filter: none;
 }
 
 .mission-name {
